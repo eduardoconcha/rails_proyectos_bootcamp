@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppVisualArt</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="assets/css/main.css" />
+      <noscript><link rel="stylesheet"
+      href="assets/css/noscript.css" /></noscript>
+  </head>
+
+  <body>
+
+      <!-- Header -->
+    <header id="header">
+    <h1>Big Picture</h1>
+    <nav>
+    <ul>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#one">What I Do</a></li>
+    <li><a href="#two">Who I Am</a></li>
+    <li><a href="#work">My Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+    </ul>
+    </nav>
+    </header>
+    <%= yield %>
+  </body>
+</html>
