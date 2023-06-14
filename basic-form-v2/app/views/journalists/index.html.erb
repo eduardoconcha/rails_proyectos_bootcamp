@@ -1,0 +1,10 @@
+
+<h1>Total de inscritos: <%= @journalist.count %></h1>
+
+
+<% @journalist.each do |p| %>
+
+<h2><%= p.name %> <%= p.lastname %></h2>
+<p><%= p.speciality %></p>
+
+<% end%>

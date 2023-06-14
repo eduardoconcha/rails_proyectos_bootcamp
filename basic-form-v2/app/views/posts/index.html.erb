@@ -1,0 +1,10 @@
+ <%= link_to "Agregar nuevo Post", posts_new_path %>
+
+ 
+ <%= @post.count %>
+
+<h1>Mostrando todos los Posts</h1>
+<% @post.each do |p| %>
+<h2><%= p.title %></h2>
+<p><%= p.content %></p>
+<% end%>
