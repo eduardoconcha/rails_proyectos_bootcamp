@@ -1,7 +1,6 @@
 class PostsController < ApplicationController
   def index
     @post = Post.all
-
   end
 
   def create
@@ -15,10 +14,6 @@ class PostsController < ApplicationController
       else
     render :new
       end
-
-    
-
-
   end
 
   def new
@@ -27,9 +22,6 @@ class PostsController < ApplicationController
   end
 
   def posts_params
-    params.require(:post).permit(:title, :content)
-    
+    params.require(:post).permit(:title, :content)    
    end
-
-
-end
+  end

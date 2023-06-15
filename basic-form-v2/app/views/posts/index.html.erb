@@ -1,10 +1,42 @@
- <%= link_to "Agregar nuevo Post", posts_new_path %>
-
- 
- <%= @post.count %>
-
 <h1>Mostrando todos los Posts</h1>
-<% @post.each do |p| %>
-<h2><%= p.title %></h2>
-<p><%= p.content %></p>
-<% end%>
+<%= link_to "Agregar nuevo Post", posts_new_path %>
+
+
+
+<table class="table table-bordered" style="width:50%">
+  <thead class="table-dark text-center">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Content</th>
+      <th scope="col">Stock</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Info</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% i = 1 %>
+
+    <% @post.each do |p| %>
+      
+
+       <tr>
+            <th class="text-center" scope="row"><%= i %></th>
+            <td><%= p.title %></td>
+            <td><%= p.content %></td>
+            <td><%= p.stock %></td>
+
+            <% if  p.title != "" %>
+              <td><button type="button" class="btn btn-primary">Edit</button></td>
+              <td><button type="button" class="btn btn-info">info</button></td>
+              <td><button type="button" class="btn btn-danger">Delete</button></td>
+            <% else %>
+              <td><button type="button" class="btn btn-info">info</button></td>
+            <% end %>            
+            <% i = i + 1 %>
+      </tr>      
+    <% end%>
+  </tbody>
+</table>

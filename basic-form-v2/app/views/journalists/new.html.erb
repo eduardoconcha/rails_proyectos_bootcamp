@@ -2,7 +2,7 @@
 <div class="row">
 
 <%= form_with model: @journalist, method: :post do |form| %>
-    <div class="">
+    
         <div>
             <%= form.label :name, "Ingrese su nombre", class: "form-label"%>
             <%= form.text_field :name, class: "form-control" %>
@@ -21,8 +21,16 @@
         <div class="mt-3">
             <%= form.submit "Enviar", class: "btn btn-primary" %>
         </div>
-    </div>
+
+
+
+        <div class="mt-3">
+        <%= link_to "Ver lista", journalists_index_path %>
+        </div>
 
 </div>
 </div>
+
+
+
 <% end %>

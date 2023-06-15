@@ -1,10 +1,18 @@
 
-<h1>Total de inscritos: <%= @journalist.count %></h1>
+<div class="container d-flex justify-content-center mt-5">
+    <div class="row">
+
+    <h1>Total de inscritos: <%= @journalist.count %></h1>
 
 
-<% @journalist.each do |p| %>
+    <% @journalist.each do |p| %>
 
-<h2><%= p.name %> <%= p.lastname %></h2>
-<p><%= p.speciality %></p>
+        <h2><%= p.name %> <%= p.lastname %></h2>
+        <p><%= p.speciality %></p>
 
-<% end%>
+    <% end%>
+
+    <%= link_to "Ingresar nuevo", journalists_new_path %>
+
+    </div>
+</div>
